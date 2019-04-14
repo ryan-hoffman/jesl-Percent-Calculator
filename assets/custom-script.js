@@ -1,0 +1,1 @@
+alert('This alert has no other purpose than to demonstrate that the js is working.  So, evidently, it is!  Please close it and shout, \'Huzzah!\'')

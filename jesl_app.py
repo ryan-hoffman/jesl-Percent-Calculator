@@ -75,11 +75,10 @@ def get_percentage(total_points, earned_points):
 
     float_total_points = float(total_points)
 
-    while True:
-        float_earned_points = float(earned_points)
-        percent_grade = float_earned_points / float_total_points * 100
+    float_earned_points = float(earned_points)
+    percent_grade = float_earned_points / float_total_points * 100
 
-        return round(percent_grade, 0)
+    return round(percent_grade, 0)
 
 if __name__ == '__main__':
     app.run_server(debug=True)

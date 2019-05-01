@@ -4,6 +4,7 @@ import dash
 from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
+import pdb
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -66,6 +67,11 @@ app.layout = html.Div(
      Input('earned_points', 'value')])
 
 def get_percentage(total_points, earned_points):
+
+    if(len(total_points) == 0):
+        return
+    if(len(earned_points) == 0):
+        return
 
     float_total_points = float(total_points)
 

@@ -83,7 +83,10 @@ def get_percentage(total_points, earned_points):
         return round(percent_grade, 0)
 
     except ValueError:
-        return html.Div('Enter numbers in the input fields, please.')
+        return html.Div(className='error message',
+            children=[
+                html.H6('Enter numbers in the input fields, please.')
+                ])
 
 if __name__ == '__main__':
     app.run_server(debug=True)

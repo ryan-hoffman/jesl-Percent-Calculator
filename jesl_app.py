@@ -73,12 +73,17 @@ def get_percentage(total_points, earned_points):
     if(len(earned_points) == 0):
         return
 
-    float_total_points = float(total_points)
+    try:
+        isinstance(float(total_points), (float)) == True and isinstance(float(earned_points), (float)) == True
 
-    float_earned_points = float(earned_points)
-    percent_grade = float_earned_points / float_total_points * 100
+        float_total_points = float(total_points)
+        float_earned_points = float(earned_points)
+        percent_grade = float_earned_points / float_total_points * 100
 
-    return round(percent_grade, 0)
+        return round(percent_grade, 0)
+
+    except ValueError:
+        return html.Div('Enter numbers in the input fields, please.')
 
 if __name__ == '__main__':
     app.run_server(debug=True)
